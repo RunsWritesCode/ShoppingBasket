@@ -55,7 +55,7 @@ public class BasketTest {
     }
 
     @Test
-    public void canCalculateTotal() {
+    public void canCalculateTotalBD() {
         basket.addItem(item1);
         basket.addItem(item2);
         basket.calculateTotalBeforeDiscount();

@@ -7,10 +7,12 @@ import java.util.ArrayList;
 public class Basket {
 
     public ArrayList<Item> items;
+    public ArrayList<IDiscount> discounts;
 
     public Basket() {
 
         items = new ArrayList<Item>();
+        discounts = new ArrayList<IDiscount>();
 
     }
 
@@ -36,6 +38,10 @@ public class Basket {
             i += item.getPrice();
         }
         return i;
+    }
+
+    public int calculateTotalAfterDiscount() {
+       
     }
 
 }
