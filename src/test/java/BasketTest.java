@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class BasketTest {
 
     Basket basket;
-    Item item;
+    Item item1;
     Item item2;
     Item item3;
     Item item4;
@@ -16,7 +16,7 @@ public class BasketTest {
     @Before
     public void before() {
         basket = new Basket();
-        item = new Item("Frog", 4.00);
+        item1 = new Item("Frog", 4.00);
         item2 = new Item("Dog", 250.00);
         item3 = new Item("baguette", 0.99);
         item4 = new Item("apple", 0.60);
@@ -27,5 +27,17 @@ public class BasketTest {
         assertEquals(0, basket.itemCount());
     }
 
+    @Test
+    public void canAddItem() {
+        basket.addItem(item2);
+        assertEquals(1, basket.itemCount());
+    }
+
+    @Test
+    public void canRemoveItem() {
+        basket.addItem(item1);
+        basket.removeItem(item1);
+        assertEquals(0, basket.itemCount());
+    }
 
 }
