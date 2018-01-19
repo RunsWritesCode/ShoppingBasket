@@ -1,6 +1,9 @@
 import basket.Basket;
 import basket.Item;
 import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class BasketTest {
 
@@ -19,6 +22,10 @@ public class BasketTest {
         item4 = new Item("apple", 0.60);
     }
 
+    @Test
+    public void basketStartsEmpty() {
+        assertEquals(0, basket.itemCount());
+    }
 
 
 }

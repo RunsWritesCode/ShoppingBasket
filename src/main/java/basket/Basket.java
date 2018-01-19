@@ -14,7 +14,8 @@ public class Basket {
 
     }
 
-
-
+    public int itemCount() {
+        return this.items.size();
+    }
 
 }
