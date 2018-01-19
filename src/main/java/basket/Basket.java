@@ -40,8 +40,9 @@ public class Basket {
         return i;
     }
 
-    public int calculateTotalAfterDiscount() {
-       
+    public double calculateTotalAfterDiscount() {
+        double subTotal = calculateTotalBeforeDiscount();
+        return subTotal * 0.8;
     }
 
 }

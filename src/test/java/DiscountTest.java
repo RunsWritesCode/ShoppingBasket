@@ -1,6 +1,6 @@
-import Discount.BOGOF;
+//import Discount.BOGOF;
 import Discount.IDiscount;
-import Discount.LoyaltyDiscount;
+//import Discount.LoyaltyDiscount;
 import Discount.TwentyPercentOff;
 import basket.Basket;
 import basket.Item;
@@ -28,8 +28,8 @@ public class DiscountTest {
         item3 = new Item("baguette", 0.99);
         item4 = new Item("apple", 0.60);
         twentypercentoff = new TwentyPercentOff();
-        loyaltyDiscount = new LoyaltyDiscount();
-        bOGOF = new BOGOF();
+//        loyaltyDiscount = new LoyaltyDiscount();
+//        bOGOF = new BOGOF();
     }
 
     @Test

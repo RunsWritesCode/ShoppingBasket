@@ -6,8 +6,9 @@ import java.util.ArrayList;
 
 public class TwentyPercentOff implements IDiscount {
 
-    double applyDiscounts(ArrayList<Item> items, double total) {
-        return
+    public double applyDiscounts(ArrayList<Item> items, double total) {
+        double test = 2.0;
+        return test;
     }
 
 }
