@@ -48,4 +48,18 @@ public class BasketTest {
         assertEquals(0, basket.itemCount());
     }
 
+    @Test
+    public void canGetPrice() {
+        basket.addItem(item2);
+        assertEquals(250, item2.getPrice(), .01);
+    }
+
+    @Test
+    public void canCalculateTotal() {
+        basket.addItem(item1);
+        basket.addItem(item2);
+        basket.calculateTotalBeforeDiscount();
+        assertEquals(254, basket.calculateTotalBeforeDiscount(), 0.01);
+    }
+
 }

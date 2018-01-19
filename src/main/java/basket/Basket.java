@@ -30,4 +30,12 @@ public class Basket {
         this.items.clear();
     }
 
+    public int calculateTotalBeforeDiscount(){
+        int i = 0;
+        for(Item item : items){
+            i += item.getPrice();
+        }
+        return i;
+    }
+
 }
