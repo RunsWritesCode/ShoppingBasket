@@ -7,8 +7,10 @@ import java.util.ArrayList;
 public class TenPercentOff implements IDiscount {
 
     public double applyDiscounts(ArrayList<Item> items, double total) {
-        double test = 2.0;
-        return test;
+        if (total > 20) {
+            return total * 0.9;
+        }
+        return total;
     }
 
 }
