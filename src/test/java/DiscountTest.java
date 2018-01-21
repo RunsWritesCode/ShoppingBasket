@@ -1,7 +1,7 @@
 //import Discount.BOGOF;
 import Discount.IDiscount;
 //import Discount.LoyaltyDiscount;
-import Discount.TwentyPercentOff;
+import Discount.TenPercentOff;
 import basket.Basket;
 import basket.Item;
 import org.junit.Before;
@@ -27,15 +27,19 @@ public class DiscountTest {
         item2 = new Item("Dog", 250.00);
         item3 = new Item("baguette", 0.99);
         item4 = new Item("apple", 0.60);
-        twentypercentoff = new TwentyPercentOff();
+        twentypercentoff = new TenPercentOff();
 //        loyaltyDiscount = new LoyaltyDiscount();
 //        bOGOF = new BOGOF();
     }
 
     @Test
-    public void canApply20PercentOff() {
+    public void canApply10PercentOff() {
         basket.addItem(item2);
         basket.calculateTotalAfterDiscount();
-        assertEquals(200, basket.calculateTotalAfterDiscount(), 0.01);
+        assertEquals(225, basket.calculateTotalAfterDiscount(), 0.01);
     }
+
+
+
+
 }

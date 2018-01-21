@@ -42,7 +42,7 @@ public class Basket {
 
     public double calculateTotalAfterDiscount() {
         double subTotal = calculateTotalBeforeDiscount();
-        return subTotal * 0.8;
+        return subTotal * 0.9;
     }
 
 }
