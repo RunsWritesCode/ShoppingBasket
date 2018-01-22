@@ -55,11 +55,16 @@ public class BasketTest {
     }
 
     @Test
+    public void getTotal() {
+
+    }
+
+    @Test
     public void canCalculateTotalBD() {
         basket.addItem(item1);
         basket.addItem(item2);
-        basket.calculateTotalBeforeDiscount();
-        assertEquals(254, basket.calculateTotalBeforeDiscount(), 0.01);
+        basket.calculateTotal();
+        assertEquals(254, basket.calculateTotal(), 0.01);
     }
 
 }

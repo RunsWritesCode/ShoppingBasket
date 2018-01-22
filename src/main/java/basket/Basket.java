@@ -8,11 +8,13 @@ public class Basket {
 
     public ArrayList<Item> items;
     public ArrayList<IDiscount> discounts;
+    public double total;
 
     public Basket() {
 
         items = new ArrayList<Item>();
         discounts = new ArrayList<IDiscount>();
+        total = 0;
 
     }
 
@@ -32,17 +34,21 @@ public class Basket {
         this.items.clear();
     }
 
-    public int calculateTotalBeforeDiscount(){
-        int i = 0;
+    public int calculateTotal(){
+        int total = 0;
         for(Item item : items){
-            i += item.getPrice();
+            total += item.getPrice();
         }
-        return i;
+        return total;
     }
 
     public double calculateTotalAfterDiscount() {
-        double subTotal = calculateTotalBeforeDiscount();
+        double subTotal = calculateTotal();
         return subTotal * 0.9;
+    }
+
+    public void addDiscount(IDiscount discount){
+        this.discounts.add(discount);
     }
 
 }

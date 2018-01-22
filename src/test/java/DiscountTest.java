@@ -1,6 +1,5 @@
-//import Discount.BOGOF;
 import Discount.IDiscount;
-//import Discount.LoyaltyDiscount;
+import Discount.LoyaltyDiscount;
 import Discount.TenPercentOff;
 import basket.Basket;
 import basket.Item;
@@ -16,9 +15,8 @@ public class DiscountTest {
     Item item2;
     Item item3;
     Item item4;
-    IDiscount twentypercentoff;
+    IDiscount tenpercentoff;
     IDiscount loyaltyDiscount;
-    IDiscount bOGOF;
 
     @Before
     public void before() {
@@ -27,9 +25,8 @@ public class DiscountTest {
         item2 = new Item("Dog", 250.00);
         item3 = new Item("baguette", 0.99);
         item4 = new Item("apple", 0.60);
-        twentypercentoff = new TenPercentOff();
-//        loyaltyDiscount = new LoyaltyDiscount();
-//        bOGOF = new BOGOF();
+        tenpercentoff = new TenPercentOff();
+        loyaltyDiscount = new LoyaltyDiscount();
     }
 
     @Test
@@ -39,7 +36,13 @@ public class DiscountTest {
         assertEquals(225, basket.calculateTotalAfterDiscount(), 0.01);
     }
 
-
+    @Test
+    public void canApplyLoyaltyDiscount() {
+        basket.addItem(item2);
+        basket.addDiscount(loyaltyDiscount);
+        basket.calculateTotalAfterDiscount();
+        assertEquals(245, basket.calculateTotalAfterDiscount(), 0.01);
+    }
 
 
 }
